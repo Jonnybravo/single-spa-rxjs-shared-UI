@@ -12,7 +12,7 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     mode: "production",
-    entry: "./src/rxjs-temp-shared-UI-library.js",
+    entry: "./src/index.js",
     output: {
       path: path.join(__dirname, "build"),
       filename: "index.js",
