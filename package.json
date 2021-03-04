@@ -1,6 +1,11 @@
 {
-    "name": "shared-ui",
-    "version": "1.0.0",
+  "name": "shared-ui",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jonnybravo/single-spa-rxjs-shared-UI"
+  },
+  "main": "dist/rxjs-temp-shared-UI-library.js",
   "scripts": {
     "start": "webpack serve --port 8005",
     "start:standalone": "webpack serve --env standalone",
