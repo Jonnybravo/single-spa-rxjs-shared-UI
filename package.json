@@ -5,6 +5,7 @@
     "type": "git",
     "url": "https://github.com/Jonnybravo/single-spa-rxjs-shared-UI"
   },
+  "main": "build/index.js",
   "scripts": {
     "start": "webpack serve --port 8005",
     "start:standalone": "webpack serve --env standalone",
