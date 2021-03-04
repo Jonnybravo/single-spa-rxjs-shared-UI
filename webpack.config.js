@@ -1,4 +1,5 @@
 const { merge } = require("webpack-merge");
+const path = require("path");
 const singleSpaDefaults = require("webpack-config-single-spa");
 
 module.exports = (webpackConfigEnv, argv) => {
@@ -10,7 +11,25 @@ module.exports = (webpackConfigEnv, argv) => {
   });
 
   return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
-    externals: ["styled-components"],
+    mode: "production",
+    entry: "./src/rxjs-temp-shared-UI-library.js",
+    output: {
+      path: path.join(__dirname, "build"),
+      filename: "index.js",
+      libraryTarget: "commonjs2",
+      publicPath: "/build/",
+    },
+    module: {
+      rules: [
+        {
+          test: /\.js?$/,
+          exclude: /(node_modules)/,
+          use: "babel-loader",
+        },
+      ],
+    },
+    resolve: {
+      extensions: [".js"],
+    },
   });
 };
