@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --color-primary: #011627;
   --color-secondary: #8b8c8a;
   --color-danger: #e71d36;
@@ -17,8 +17,8 @@
 @tailwind utilities;
 
 body {
-  /* background-color: var(--color-background);
-  color: var(--color-white); */
+  background-color: var(--color-background);
+  color: var(--color-white);
 }
 
 nav.topnav {
@@ -26,4 +26,4 @@ nav.topnav {
   width: 100vw;
   top: 0px;
   z-index: 100;
-}
+} */

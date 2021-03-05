@@ -24,14 +24,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
-        exclude: /(node_modules)/,
-        use: "babel-loader",
+        test: /\.jsx?$/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            cacheDirectory: true,
+            cacheCompression: false,
+            envName: "production",
+          },
+        },
+        exclude: /node_modules/,
       },
     ],
   },
   resolve: {
-    extensions: [".js"],
+    extensions: [".js", "jsx"],
   },
   // });
 };
