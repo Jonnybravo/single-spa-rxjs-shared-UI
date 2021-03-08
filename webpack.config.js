@@ -1,20 +1,15 @@
-// const { merge } = require("webpack-merge");
+const webpack = require("webpack");
 const path = require("path");
-// const singleSpaDefaults = require("webpack-config-single-spa");
-
-// (webpackConfigEnv, argv) => {
-//   const defaultConfig = singleSpaDefaults({
-//     orgName: "rxjs-temp",
-//     projectName: "shared-UI-library",
-//     webpackConfigEnv,
-//     argv,
-//   });
-
-//   return merge(defaultConfig,
 
 module.exports = {
   mode: "production",
   entry: "./src/index.js",
+  // plugins: [
+  //   new webpack.optimize.CommonsChunkPlugin({
+  //     name: "vendor",
+  //     minChunks: Infinity,
+  //   }),
+  // ],
   output: {
     path: path.join(__dirname, "build"),
     filename: "index.js",
@@ -45,5 +40,4 @@ module.exports = {
     "react-dom": "react-dom",
     "styled-components": "styled-components",
   },
-  // });
 };
