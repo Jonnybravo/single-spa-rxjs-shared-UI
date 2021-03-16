@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { Input as SUIInput } from "semantic-ui-react";
 
 function Input(props) {
   const { value, placeholder, actionName, onClick, onChange } = props;
+
+  useEffect(() => {
+    console.log("HELLOOO");
+  }, []);
 
   return (
     <SUIInput
